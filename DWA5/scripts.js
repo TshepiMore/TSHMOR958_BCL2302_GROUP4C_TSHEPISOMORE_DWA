@@ -14,7 +14,7 @@ form.addEventListener("submit", (event) => {
   // Checking if divider is less than 0, if so display error message and console error.
     else if (divider < 0) {
         result.innerText = "Division not performed. Invalid number provided. Try again";
-        console.error("Invalid division:", dividend, "/", divider);
+        console.error("Invalid division:");
   }
 
    // Checking if either dividend or divider is not a number, if so display error message and console error.
