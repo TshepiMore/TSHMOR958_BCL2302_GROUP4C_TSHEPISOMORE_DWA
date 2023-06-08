@@ -6,8 +6,8 @@ form.addEventListener("submit", (event) => {
     const entries = new FormData(event.target);
     const { dividend, divider } = Object.fromEntries(entries);
 
- // Checking if either dividend or divider is falsy,displaying an error message if either value is missing.
-    if (!dividend || !divider) {
+ // Checking if either dividend or divider is empty,displaying an error message if either value is missing.
+    if (dividend === "" || divider === "") {
         result.innerText = "Division not performed. Both values are required in inputs. Try again";
   }
 
@@ -29,3 +29,30 @@ form.addEventListener("submit", (event) => {
         result.innerText = divisionResult;
   }
 });
+
+// const form = document.querySelector("[data-form]");
+// const result = document.querySelector("[data-result]");
+
+// form.addEventListener("submit", (event) => {
+//   event.preventDefault();
+//   try {
+//     const entries = new FormData(event.target);
+//     const { dividend, divider } = Object.fromEntries(entries);
+
+//     if (!dividend || !divider) {
+//       throw new Error("Division not performed. Both values are required in inputs. Try again");
+//     }
+//     if (divider < 0) {
+//       throw new Error("Division not performed. Invalid number provided. Try again");
+//     }
+//     if (isNaN(dividend) || isNaN(divider)) {
+//       document.body.innerHTML = "invalid number";
+//     }
+
+//     const divisionResult = Math.floor(dividend / divider);
+//     result.innerText = divisionResult;
+//   } catch (error) {
+//     result.innerText = error.message;
+//     console.error(error);
+//   }
+// });
