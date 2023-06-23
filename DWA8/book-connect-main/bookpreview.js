@@ -1,4 +1,5 @@
 import { authors, books } from './data.js'
+
 // Selectors for various elements in the HTML document
 export const selectors = {
     searchGenres: document.querySelector('[data-search-genres]'),
@@ -25,6 +26,7 @@ export const selectors = {
     listDescription: document.querySelector('[data-list-description]'),
     save: document.querySelector('[form="settings"]')
 }
+
   /**
  * Create a book preview element.
  * @param {object} book - The book object.
